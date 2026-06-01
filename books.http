@@ -1,0 +1,32 @@
+### Get list of books: get_books
+GET http://localhost:8000/api/books
+
+### Get book details by book_id: get_book_detail
+GET http://localhost:8000/api/books/id/1
+
+### Get Book Details by publication_year: get_book_detail_by_year
+GET http://localhost:8000/api/books/year/2003
+
+### Get All Publication years of books: get_publication_years
+GET http://localhost:8000/api/books/publication_years
+
+### Create a New Book
+POST http://localhost:8000/api/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "9",
+    "title": "Harry Potter and New Machine",
+    "publication_year": 2009,
+    "order": 8,
+    "page_count": {
+        "us_scholastic_hardcover": 700,
+        "uk_bloomsbury_hardcover": 700
+    },
+    "categories": [
+        "Fantasy",
+        "Adventure",
+        "Tragedy"
+    ]
+}
+
