@@ -84,6 +84,10 @@ BOOKS = [
   }
 ]
 
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
+
 @app.get("/api/books")
 def get_books(category: str = None):
     filtered_books = copy.deepcopy(BOOKS)
